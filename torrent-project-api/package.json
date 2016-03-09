@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "torrent-project-api@^1.0.3",
+      "/home/jd/DEVs/web/webtorrent/torrent-metasearch-api"
+    ]
+  ],
+  "_from": "torrent-project-api@>=1.0.3 <2.0.0",
+  "_id": "torrent-project-api@1.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/torrent-project-api",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "email": "mathiasvr@gmail.com",
+    "name": "mathiasvr"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "torrent-project-api",
+    "raw": "torrent-project-api@^1.0.3",
+    "rawSpec": "^1.0.3",
+    "scope": null,
+    "spec": ">=1.0.3 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/torrent-project-api/-/torrent-project-api-1.0.3.tgz",
+  "_shasum": "4424b52368e9d9e736a5e485988de82006cdd4c6",
+  "_shrinkwrap": null,
+  "_spec": "torrent-project-api@^1.0.3",
+  "_where": "/home/jd/DEVs/web/webtorrent/torrent-metasearch-api",
+  "author": {
+    "email": "mathiasvr@gmail.com",
+    "name": "Mathias Rasmussen"
+  },
+  "bugs": {
+    "url": "https://github.com/mathiasvr/torrent-project-api/issues"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "request": "^2.67.0"
+  },
+  "description": "Torrent search API for torrentproject.se",
+  "devDependencies": {
+    "tape": "^4.3.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4424b52368e9d9e736a5e485988de82006cdd4c6",
+    "tarball": "http://registry.npmjs.org/torrent-project-api/-/torrent-project-api-1.0.3.tgz"
+  },
+  "gitHead": "26bf650e51e0d0582722a0f9096c91677ec27302",
+  "homepage": "https://github.com/mathiasvr/torrent-project-api#readme",
+  "keywords": [
+    "api",
+    "magnet",
+    "search",
+    "torrent",
+    "torrentproject"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "mathiasvr",
+      "email": "mathiasvr@gmail.com"
+    }
+  ],
+  "name": "torrent-project-api",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathiasvr/torrent-project-api.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js"
+  },
+  "version": "1.0.3"
+}
