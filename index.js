@@ -2,25 +2,30 @@ var express       = require('express');
 var app           = express();
 var cors          = require('cors');
 var search        = require('./search.js');
+var popcorn       = require('./popcorn-search.js');
 
 app.set('json spaces', 2);
 app.use(cors());
 
 app.get('/', function(req, res){
     res.json({status: 'ok',
-              description: 'API for querying torrentproject.se',
-              orderings: [
-                'best', 'latest', 'seeders',
-                'oldest', 'speed', 'peers', 'sizeD', 'sizeA'
-              ],
-              filters: [
-                'video', 'tv', 'dvd',
-                'dvdrip', 'hdrip', 'lq'
-              ],
-              sample:'/search?query=community s02e05&page=1&limit=50&order=peers&filter=tv'});
+              description: 'API connected to Popcorn Time database',
+              sample:'/search?query=community&page=1'});
 });
 
 app.get('/search', function(req, res){
+  var query = req.query.query;
+  var page = req.query.page;
+  popcorn(query, page, function(err, result){
+    if(err){
+      res.json({err: err});
+    }else{
+      res.json(JSON.parse(result.text));
+    }
+  })
+})
+
+app.get('/old-search', function(req, res){
     var query  = req.query.query;
     var page   = req.query.page;
     var limit  = req.query.limit;

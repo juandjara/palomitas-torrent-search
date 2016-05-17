@@ -35,6 +35,7 @@ return function (err, res){
         torrent.size   = (torrent.size / 1024 / 1024).toFixed(2) + " MB"
         tp.magnet(torrent, function(err, link){
             if(err){
+                console.log("Error in metacb.mapTorrents.getMagnet for torrent"+JSON.stringify(torrent));
                 console.error(err);
                 reject(err);
             }else{
